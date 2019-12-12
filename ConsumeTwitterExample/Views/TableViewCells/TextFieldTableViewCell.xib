@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TextFieldTableViewCellIdentifier" id="KGk-i7-Jjw" customClass="TextFieldTableViewCell" customModule="ConsumeTwitterExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZi-eG-KM3">
+                        <rect key="frame" x="12" y="8" width="146" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="okN-nA-GyS">
+                        <rect key="frame" x="162" y="8" width="146" height="28"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                        <connections>
+                            <action selector="textFieldDidChangeText:" destination="KGk-i7-Jjw" eventType="editingChanged" id="AQg-3Q-ekM"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="NSP-Xa-99l"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="okN-nA-GyS" firstAttribute="leading" secondItem="pZi-eG-KM3" secondAttribute="trailing" constant="4" id="J1g-jP-JTg"/>
+                    <constraint firstItem="pZi-eG-KM3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="KP8-d9-ZlZ"/>
+                    <constraint firstItem="okN-nA-GyS" firstAttribute="bottom" secondItem="pZi-eG-KM3" secondAttribute="bottom" id="S1U-NO-L4q"/>
+                    <constraint firstAttribute="trailing" secondItem="okN-nA-GyS" secondAttribute="trailing" constant="12" id="TYd-Zj-pRG"/>
+                    <constraint firstItem="pZi-eG-KM3" firstAttribute="width" secondItem="okN-nA-GyS" secondAttribute="width" id="f2L-00-tSL"/>
+                    <constraint firstItem="pZi-eG-KM3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="g6w-z7-umU"/>
+                    <constraint firstAttribute="bottom" secondItem="pZi-eG-KM3" secondAttribute="bottom" constant="8" id="j1d-uv-YZg"/>
+                    <constraint firstItem="okN-nA-GyS" firstAttribute="top" secondItem="pZi-eG-KM3" secondAttribute="top" id="oYr-Tn-WrD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="headerLabel" destination="pZi-eG-KM3" id="Ulq-IN-VWP"/>
+                <outlet property="valueTextField" destination="okN-nA-GyS" id="uFW-Ht-UUY"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="94"/>
+        </tableViewCell>
+    </objects>
+</document>
